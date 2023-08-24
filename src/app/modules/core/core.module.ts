@@ -13,7 +13,6 @@ import { SelectOptionComponent } from './components/select-option/select-option.
 import { TemplatePageComponent } from './pages/template-page/template-page.component';
 import { ViewerComponent } from './components/viewer/viewer.component';
 import { GroupboxComponent } from './components/groupbox/groupbox.component';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
