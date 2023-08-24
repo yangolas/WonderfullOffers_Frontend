@@ -23,7 +23,7 @@ FROM nginx:latest
 COPY --from=builder /app/dist/wonderfulloffersfronted /usr/share/nginx/html
 
 # Expone el puerto 8251 para acceder a la aplicación
-EXPOSE 8251
+EXPOSE 80
 
 # Inicia el servidor web de Nginx
 CMD ["nginx", "-g", "daemon off;"]
