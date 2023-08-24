@@ -1,0 +1,29 @@
+# Usa una imagen base de Node.js para construir la aplicación
+FROM node:18 as builder
+
+# Establece el directorio de trabajo dentro del contenedor
+WORKDIR /app
+
+# Copia los archivos de configuración necesarios
+COPY package.json package-lock.json angular.json tsconfig.* ./
+
+# Instala las dependencias del proyecto
+RUN npm ci
+
+# Copia el resto de los archivos de la aplicación
+COPY . .
+
+# Ejecuta el comando de construcción para el entorno deseado
+RUN npm run build -- --configuration=production
+
+# Configura el servidor web para servir los archivos estáticos generados
+FROM nginx:latest
+
+# Copia los archivos generados durante el build en el directorio del servidor web
+COPY --from=builder /app/dist/spotify2 /usr/share/nginx/html
+
+# Expone el puerto 8251 para acceder a la aplicación
+EXPOSE 8251
+
+# Inicia el servidor web de Nginx
+CMD ["nginx", "-g", "daemon off;"]
