@@ -23,7 +23,7 @@ jobs:
       working-directory: ./src  # Ajusta la ruta a tu carpeta de código fuente Angular
 
     - name: Build Angular app
-      run: ng build --production
+      run: ng build --prod
       working-directory: ./src  # Ajusta la ruta a tu carpeta de código fuente Angular
 
     - name: log in in Docker Hub
