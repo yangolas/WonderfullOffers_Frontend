@@ -1,0 +1,5 @@
+<div class="company-container">
+    <select class="company-container__options" [(ngModel)]="selectedOption" (ngModelChange)="onOptionChange($event)">
+     <option *ngFor="let option of data" [value]="option">{{ option }}</option>
+    </select>
+</div>

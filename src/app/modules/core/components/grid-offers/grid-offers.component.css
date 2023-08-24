@@ -1,0 +1,80 @@
+.offer-grid
+{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    width: 85%;
+    margin: auto;
+    padding: 0;
+}
+
+@media (max-width: 768px) 
+{
+    .offer-grid{
+      padding: 0; 
+      margin: 0;
+      width: 100%;
+    }
+}
+
+.offer-grid__element
+{
+    list-style: none;
+    padding: 5px;
+}
+
+.element-anchor
+{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    list-style: none;
+    margin-bottom: 5px;
+    width: 22vh;
+    height: 100%;
+    border: 2px solid var(--color-shadow);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.element-anchor:hover 
+{
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 10px var(--color-shadow);
+}
+
+
+.element
+{
+    margin: 5px;
+    width: 20vh;
+    height: 100%;
+}
+
+.element-img {
+    width: 80%;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative; 
+    margin: auto;
+  }
+  
+  .img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    position: absolute; 
+  }
+
+.field
+{
+    margin: 5px 5px 5px 10px;
+}
+
+label 
+{
+    cursor: pointer;
+}

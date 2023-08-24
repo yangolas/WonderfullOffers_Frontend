@@ -1,0 +1,102 @@
+.groupbox-list 
+{
+  direction: flex;
+  flex-wrap: wrap;
+}
+.groupbox {
+    border: 1px solid var(--color-border);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 5px var(--color-shadow)
+  }
+  
+  .groupbox-header {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .groupbox-content {
+
+  }
+
+  .groupbox-content__selectorAndViewerHorizontal
+  {
+    display: flex;
+    align-items: center; 
+  }
+
+  .selectorAndViewerHorizontal-option
+  {
+    width: 200px;
+  }
+
+  .selectorAndViewerHorizontal-viewer
+  {
+    width: 100%;
+  }
+
+  .groupbox-content__inputButtonAndViewerMultyHorizontal
+  {
+    display: flex;
+    align-items: center; 
+  }
+  .inputButtonAndViewerMultyHorizontal-container__input
+  {
+    width: 200px;
+  }
+
+  .inputButtonAndViewerMultyHorizontal-input
+  {
+    width: 40px;
+  }
+
+  .inputButtonAndViewerMultyHorizontal-input input {
+    display: none;
+  }
+  
+  /* Estilo para el botón personalizado */
+  .inputButtonAndViewerMultyHorizontal-input .input {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: var(--color-button);
+    color: var(--color-button-leters);
+    border: none;
+    border-radius: var(--squares-button);
+    cursor: pointer;
+  }
+
+  .inputButtonAndViewerMultyHorizontal-viewer
+  {
+    width: 100%;
+  }
+
+  
+
+  .groupbox-content__buttonAndViewerMultySelectorHorizontal
+  {
+    display: flex;
+    align-items: center; 
+ 
+  }
+
+  .buttonAndViewerMultySelectorHorizontal-container__button
+  {
+    width: 200px;
+  }
+  
+  .buttonAndViewerMultySelectorHorizontal-button
+  {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: var(--color-button);
+    color: var(--color-button-leters);
+    border: none;
+    border-radius: var(--squares-button);
+    cursor: pointer;
+  }
+
+  .buttonAndViewerMultySelectorHorizontal-viewer
+  {
+    width: 100%;
+ }

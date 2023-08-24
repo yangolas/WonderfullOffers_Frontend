@@ -1,0 +1,29 @@
+.pagination 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination_button 
+{
+    margin: 5px;
+}
+  
+.pagination_indicator 
+{
+    margin: 5px;
+}
+
+@media (max-width: 768px) 
+{
+    .pagination_button 
+    {
+        margin: 1px;
+    }
+    
+    .pagination_indicator 
+    {
+        margin: 1px;
+    }
+}

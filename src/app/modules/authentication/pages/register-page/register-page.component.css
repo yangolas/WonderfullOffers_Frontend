@@ -1,0 +1,153 @@
+
+.register-auth__wrapper
+{   
+    padding: .5rem;
+    top: 20%;
+    right: var(--width-var); 
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    background-color: white;
+    border: black solid 1px ;
+    border-radius: 1rem;
+    max-width: 250px;
+    margin: auto;
+}
+
+.register-auth__social
+{
+    display: flex;
+    flex-direction: column ;
+    gap: .5rem;
+}
+
+.register-auth__separator
+{
+    background-color: grey;
+    width: 100%;
+    height: .1rem;
+}
+
+.register-auth__form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;;
+    gap: .5rem;
+    color:var(--color-1)
+}
+
+.register-auth__options
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: .5rem;
+    color:var(--color-1)
+}
+
+.gendre-block
+{
+    justify-content: space-around;
+}
+
+.title
+{
+    text-align: start;
+    display: block;
+    font-weight: 800;
+}
+
+.row
+{
+    text-align: start;
+    display: block;
+}
+
+.birthday-block
+{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: .2rem;
+    margin-bottom: .2rem;
+}
+
+.birthday-block__day
+{
+    width: 15%;
+}
+
+.birthday-block__month
+{
+    width: 50%;
+}
+
+.birthday-block__year
+{
+    width: 25%;
+}
+.gendre-block
+{
+    display: flex;
+    flex-direction: row;
+}
+
+input
+{
+    padding: 0.2em; 
+    box-sizing: border-box;
+    width: 100%;
+}
+
+select
+{
+    padding: 0.2em; 
+    box-sizing: border-box;
+    width: 100%;
+}
+
+
+.social__btn--facebook
+{
+    background-color: darkblue;
+    color:var(--color-7)
+}
+
+.social__btn--apple
+{
+    background-color: var(--color-1);
+    color:var(--color-7)
+}
+
+.social__btn--google
+{
+    background-color: white;
+    color:var(--color-1)
+}
+
+.social__text
+{
+    color:var(--color-1);
+    margin: .5rem;
+}
+
+.btn
+{
+    border: black solid 1px ;
+    border-radius: 1rem;
+}
+
+input.ng-invalid.ng-touched {
+    border: solid 2px red !important
+}
+
+.register-auth_errors {
+    display: block;
+    justify-content: center;
+    text-align: left;
+    color: red;
+}

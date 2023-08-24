@@ -1,0 +1,47 @@
+<div class="groupbox">
+    <div class="groupbox-header">{{title}}</div>
+    <div class="groupbox-content">
+        <ng-container [ngSwitch]="type">
+            <ng-container *ngSwitchCase="groupboxType.selectorAndViewerHorizontal">
+                <ng-container *ngTemplateOutlet="selectorAndViewerHorizontal"></ng-container>
+            </ng-container>
+            <ng-container *ngSwitchCase="groupboxType.inputButtonAndViewerMultyHorizontal">
+                <ng-container *ngTemplateOutlet="inputButtonAndViewerMultyHorizontal"></ng-container>
+            </ng-container>
+            <ng-container *ngSwitchCase="groupboxType.buttonAndViewerMultySelectorHorizontal">
+                <ng-container *ngTemplateOutlet="buttonAndViewerMultySelectorHorizontal"></ng-container>
+            </ng-container>
+        </ng-container>
+    </div>
+</div>
+
+<ng-template #selectorAndViewerHorizontal >
+<div class="groupbox-content__selectorAndViewerHorizontal">
+    <app-select-option class="selectorAndViewerHorizontal-option"> </app-select-option>
+    <app-viewer class="selectorAndViewerHorizontal-viewer"
+    [type]="viewerType.simple"></app-viewer>
+</div>
+</ng-template>
+
+<ng-template #inputButtonAndViewerMultyHorizontal >
+<div class="groupbox-content__inputButtonAndViewerMultyHorizontal ">
+    <div class="inputButtonAndViewerMultyHorizontal-container__input">
+        <div class="inputButtonAndViewerMultyHorizontal-input">
+            <input type="file" id="fileInput" multiple accept="image/*">
+            <label for="fileInput" class="input">Load templates</label>
+        </div>
+    </div>
+    <app-viewer class="inputButtonAndViewerMultyHorizontal-viewer"
+    [type]="viewerType.multy"></app-viewer>
+</div>
+</ng-template>
+
+<ng-template #buttonAndViewerMultySelectorHorizontal >
+<div class="groupbox-content__buttonAndViewerMultySelectorHorizontal ">
+    <div class="buttonAndViewerMultySelectorHorizontal-container__button">
+        <button class="buttonAndViewerMultySelectorHorizontal-button">Delete template</button>
+    </div>
+    <app-viewer class="buttonAndViewerMultySelectorHorizontal-viewer"
+    [type]="viewerType.multySelector"></app-viewer>
+</div>
+</ng-template>

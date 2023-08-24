@@ -1,0 +1,11 @@
+.company-container 
+{
+    position: sticky;
+    padding: 5px;
+}
+  
+.company-container__options 
+{
+    width: 85px;
+    padding: 5px;
+}

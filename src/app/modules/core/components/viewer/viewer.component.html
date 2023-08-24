@@ -1,0 +1,41 @@
+
+<div class="viewer">
+    <ng-container [ngSwitch]="type">
+        <ng-container *ngSwitchCase="viewerType.simple">
+            <ng-container *ngTemplateOutlet="simple"></ng-container>
+        </ng-container>
+        <ng-container *ngSwitchCase="viewerType.multy">
+            <ng-container *ngTemplateOutlet="multy"></ng-container>
+        </ng-container>
+        <ng-container *ngSwitchCase="viewerType.multySelector">
+            <ng-container *ngTemplateOutlet="multySelector"></ng-container>
+        </ng-container>
+    </ng-container>
+</div>
+
+    
+<ng-template #simple >
+    <img class="viewer-item__img" src="https://i.blogs.es/ceda9c/dalle/1366_2000.jpg">
+</ng-template>
+    
+<ng-template #multy >
+    <ngb-carousel class="viewer-multy__carousel" >
+        <ng-template class="multy-carousel__slide" ngbSlide *ngFor="let image of templatesToUpload; let i = index">
+            <img   class="multy-carousel__img" [src]="image.src"/>
+        </ng-template>
+      </ngb-carousel>
+</ng-template>
+
+<ng-template #multySelector >
+    <ngb-carousel class="viewer-multySelector__carousel">
+        <ng-template class="multySelector-carousel__slide" ngbSlide *ngFor="let image of templatesToUpload; let i = index">
+          <div class="slide-container" [ngClass]="{ 'selected-slide': image.isSelected === true }" (click)="toggleSelection(i)">
+            <img class="slide-container__img" [src]="image.src"/>
+            <div class="slide-container__overlay" *ngIf="image.isSelected === true">
+              <i class="fas fa-check"></i>
+              <span class="overlay_text">Selected for removing </span>
+            </div>
+          </div>
+        </ng-template>
+      </ngb-carousel>
+</ng-template>   

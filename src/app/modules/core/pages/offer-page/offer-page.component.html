@@ -1,0 +1,22 @@
+
+<div>
+    <div class="container-configuation">
+        <app-pagination *ngIf="totalPages >= 1"
+        [currentPage]="currentPage"
+        [totalPages]="totalPages"
+        (pageChange)="onPageChange($event)">
+        </app-pagination>
+    
+        <app-select-option
+        [selectedOption]="selectedCompany"
+        [data]="comboCompanies"
+        (optionChange)="onOptionChange($event)">
+        </app-select-option>
+
+        <button [routerLink]="'template'">Templates</button>
+    </div>
+
+    <app-grid-offers
+    [offers] = "offers">
+    </app-grid-offers>
+</div>

@@ -1,0 +1,37 @@
+
+<ul class="offer-grid">
+    <li class="offer-grid__element " *ngFor="let offer of offers">
+        <div>
+            <a [href]="offer.Uri" class="element-anchor">
+                <div class="element-img field ">
+                    <img class="img" [src]="offer.Img">
+                </div>
+                <div class="element-title field">
+                    <label>Title: </label>
+                    <span>{{offer.Title| slice:0:15 }}{{ offer.Title.length > 15 ? '...' : '' }}</span>
+                </div>
+                <div *ngIf="offer.Disccount!==0" class="element-disccount field">
+                    <label>Disccount: </label>
+                    <span>{{ offer.Disccount }}%</span>
+                </div>
+                <div *ngIf="offer.PriceWithinDisccount!==null" class="element-pricewithindisccount field">
+                    <label>Price disccount: </label>
+                    <span>{{ offer.PriceWithinDisccount }}€</span>
+                </div>
+                <div *ngIf="offer.PriceWithoutDisccount!==null" class="element-pricewithoutdisccount field">
+                    <label>Real price: </label>
+                    <span>{{ offer.PriceWithoutDisccount }}€</span>
+                </div>
+                <div class="element-date field">
+                    <label>Date: </label>
+                    <span>{{offer.TimeSpan}}</span>
+                </div>
+                <div class="element-uri field">
+                    <a [href]="offer.Uri">
+                        <span> Go to the offer</span>
+                    </a>
+                </div>
+            </a>
+        </div>
+    </li>
+</ul>

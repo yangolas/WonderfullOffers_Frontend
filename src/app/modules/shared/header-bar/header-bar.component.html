@@ -1,0 +1,24 @@
+<header class="header-bar__option">
+    <!-- <div  class="header-bar__search search" *ngIf="isSearchOption"> -->
+        <!-- <i class="uil uil-search search-icon"></i> -->
+        <!-- <input class="search-input" [(ngModel)]="searchText" (ngModelChange)="onSearchTextChange()" placeholder="What do you feel to listen?"> -->
+    <!-- </div> -->
+    <div class="header-bar__session-in" *ngIf="authentication.token === undefined" >
+        <button  class="header-bar__login"
+            (click)="login()"
+            >Log in
+        </button>
+        <button  class="header-bar__signup"
+            routerLink="/authentication/register">Sign up
+        </button>
+    </div>
+    <div  class="header-bar__session-out" *ngIf="authentication.token">
+        <button class="header-bar__music"
+            routerLink="/uploadmusic">Upload your music</button>
+        <button class="header-bar__signout"
+            (click)="logout()">Sign out</button>
+    </div>
+</header>
+
+<!-- routerLink="/authentication/login" -->
+<!-- (click)="deleteToken()" -->

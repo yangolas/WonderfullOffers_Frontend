@@ -1,0 +1,47 @@
+<div #login class="login-auth" [style.--width-var]="width+'%'">
+    <article class="login-auth__wrapper">
+        <section class="login-auth__social social">
+            <p class="social__text">To join us, log in Spotify</p>
+            <!-- <button class="btn social__btn--facebook">
+                <i class="uil uil-facebook-f"></i>
+                Facebook 
+            </button>
+            <button class="btn social__btn--apple">
+                <i class="button uil uil-apple"></i>
+                Apple
+            </button>
+            <button class="btn social__btn--google">
+                <i class="uil uil-google"></i>
+                Google
+            </button> -->
+        </section>
+        <div class="login-auth__separator">
+        </div>
+        <section>
+            <form [formGroup]="form" class="login-auth__form" >
+                <div class="login-auth__user">
+                    <label for="user">User: </label>
+                    <input formControlName="username" type="text" placeholder="username or email">
+                </div>
+                <div class="login-auth__password">
+                    <label for="password">Pass: </label>
+                    <input formControlName="password" type="password" (keyup.enter)="setLogin()">
+                </div>
+                <div class="login-auth__options">
+                    <div class=" login-auth__signUp">
+                        <button type="button"  class="btn" [routerLink]="['/authentication/register']">
+                            Sign Up
+                        </button>
+                    </div>
+                    <div class=" login-auth__submit">
+                        <button [disabled]="form.invalid"  class="btn" (click)="setLogin() ">
+                            Log In
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+        </section>
+    </article>
+</div>
+
