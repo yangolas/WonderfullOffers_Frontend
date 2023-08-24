@@ -20,7 +20,7 @@ RUN npm run build -- --configuration=production
 FROM nginx:latest
 
 # Copia los archivos generados durante el build en el directorio del servidor web
-COPY --from=builder /app/dist/dist/wonder-full-offers-frontend /usr/share/nginx/html
+COPY --from=builder /app/dist/wonder-full-offers-frontend /usr/share/nginx/html
 
 # Expone el puerto 8251 para acceder a la aplicación
 EXPOSE 80
